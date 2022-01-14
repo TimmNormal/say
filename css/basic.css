@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'LeoHand';
+    src: url('font/LeoHand-Light.eot');
+    src: local('font/LeoHand-Light'),
+        url('font/LeoHand-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/LeoHand-Light.woff2') format('woff2'),
+        url('font/LeoHand-Light.woff') format('woff'),
+        url('font/LeoHand-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root{
+    --main-shadow:0px 4px 6px rgba(0, 0, 0, 0.5);
+    --coffe-color:#efe5de;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100vw;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url(l.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+
+    font-family: "LeoHand", serif!important;
+    font-weight: 10!important;
+    letter-spacing: 2px;
+
+}
+
+
+h1{
+    margin: 0;
+}
+
+
+
+input{
+    width: 75%;
+    height: 30px;
+
+    outline: none;
+    border: none; 
+    border-bottom: 2px solid  black;
+
+    font-family: "LeoHand", serif!important;
+    font-weight: bold!important;
+    letter-spacing: 3px!important;
+    font-size: 20px;
+
+    transition: border-bottom 0.5s;
+}
+
+
+button{
+    position: relative;
+
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: var(--main-shadow);
+
+    outline: none!important;
+    border: none;
+
+    font-family: "LeoHand", serif!important;
+    font-weight: bold!important;
+    letter-spacing: 3px!important;
+    font-size: 20px;
+
+    overflow: hidden;
+}
+
+button:active{
+    box-shadow: none;
+}
+
+button:hover::before{
+    height: 100%;
+}
+
+button::before{
+    display: inline-block;
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: 0;
+    width: 100%;
+
+    background-color: #efe5de;
+
+    transition: height 0.5s;
+    z-index: 0;
+}
+
+
+input:focus-visible{
+    outline: none;   
+    border-bottom: 2px solid rgb(119, 116, 116);
+}
+
+
+a{
+    color:black;
+    cursor: pointer;
+
+    text-decoration: underline;
+
+    font-weight: bold;
+    
+}
+
+.plate{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: var(--main-shadow)
+}
+
+
+/* Вспомогашки */
+
+
+
+.df{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+}
+
+.aic{
+    align-items: center;
+}
+
+.cc{
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   
+}
+
+
+.p1{
+    padding: 50px;
+}
+
+.p2{
+    padding: 40px;
+}
+
+.p3{
+    padding: 30px;
+}
+
+.p4{
+    padding: 20px;
+}
+
+.p5{
+    padding: 10px;
+}
+
+.m1{
+    margin: 50px;
+}
+
+.m2{
+    margin: 40px;
+}
+
+.m3{
+    margin: 30px;
+}
+
+.m4{
+    margin: 20px;
+}
+
+.m5{
+    margin: 10px;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>SAY</title>
+</head>
+<body>
+    <div class="eyeContainer">
+        <div class="eye top"></div>
+        <div class="eye l"></div>
+        <div class="eye r"></div>
+        <div class="eye b"></div>
+    </div>
+    <div class="mainList">
+        <div class="textList"></div>
+    </div>
+
+    <div class="eyeContainer">
+        <div class="eye top"></div>
+        <div class="eye l"></div>
+        <div class="eye r"></div>
+        <div class="eye b"></div>
+    </div>
+
+    <script>
+        const list = document.querySelector(".textList")
+        window.addEventListener("keydown", (e)=>{
+            if(e.keyCode == 8){
+                list.lastChild.remove()
+            } 
+            else if (e.key == "Shift" || (e.keyCode > 36 && e.keyCode < 41)){
+
+            }
+            else if(e.key == "Enter")
+                list.innerHTML += "<p style='width:100%'></p>"
+            else if(e.key == " "){
+                list.innerHTML += `<p class="space"></p>`
+            }
+            else{
+                list.innerHTML += `<p>${e.key}</p>`
+                list.lastChild.animate([
+                    {opacity:0},
+                    {opacity:1}
+                ],{
+                    duration:500
+                })
+            }
+
+            list.lastChild.scrollIntoView()
+
+        })
+
+        const d = document.createElement("div")
+        d.innerHTML = "we"
+        console.log(d.lastChild)
+    </script>
+</body>
+</html>
